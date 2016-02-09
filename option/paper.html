@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>Pedra, paper, tisores, llangardaix, Spock</title>
+
+</head>
+
+<body>
+
+<div id="option"> </div>
+
+<div id = "contra">
+<p> VS </p>
+</div>
+
+<a href="../pptls.html"> <div id="home">
+Home
+</div></a>
+
+<div id="option2"> </div>
+
+<div id="result"> </div>
+
+
+<script type="text/javascript">
+
+function alChoose() {
+
+	var option = Math.floor((Math.random() * 5) + 1);
+	var win = false;
+	var draw = false;
+	var rock = false;
+	var paper = false;
+	var scissors = false;
+	var lizard = false;
+	var spock = false;
+
+	switch(option) {
+
+		case 1: rock = true;
+		break;
+
+		case 2: paper = true;
+		break;
+
+		case 3: scissors = true;
+		break;
+
+		case 4: lizard = true;
+		break;
+
+		case 5: spock = true;
+		break;
+
+	}
+
+	if (rock==true) {
+		document.getElementById("option2").style.backgroundImage = "url('../images/rock.png')";
+		win = true;
+	}
+	if (paper==true) {
+		document.getElementById("option2").style.backgroundImage = "url('../images/paper.png')";
+		draw= true;
+	}
+	if (scissors==true) {
+		document.getElementById("option2").style.backgroundImage = "url('../images/scissors.png')";
+	}
+	if (lizard==true) {
+		document.getElementById("option2").style.backgroundImage = "url('../images/lizard.png')";
+	}
+	if (spock==true) {
+		document.getElementById("option2").style.backgroundImage = "url('../images/spock.jpg')";
+		win = true;		
+	}
+	if (win==true && draw==false) {
+		document.getElementById("result").style.backgroundImage = "url('../images/winner.png')";
+	} else if (win==false && draw==false) {
+		document.getElementById("result").style.backgroundImage = "url('../images/loser.png')";
+	} else if (win==false && draw==true) {
+		document.getElementById("result").style.backgroundImage = "url('../images/draw.png')";
+	}
+
+
+
+}
+document.getElementById("option").style.backgroundImage = "url('../images/paper.png')";
+alChoose();
+
+</script>
+
+
+</body>
+</html>

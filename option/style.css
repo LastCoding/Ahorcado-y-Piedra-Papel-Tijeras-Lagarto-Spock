@@ -1,0 +1,104 @@
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+	background-image: url("pptlsfondo.jpg");
+	background-size: 100% auto;
+}
+
+div {
+    width: 400px;
+    height: 400px;
+}
+
+#home {
+	position: absolute;
+	-moz-box-shadow:inset 0px 0px 0px 0px #bbdaf7;
+	-webkit-box-shadow:inset 0px 0px 0px 0px #bbdaf7;
+	box-shadow:inset 0px 0px 0px 0px #bbdaf7;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #414ab3), color-stop(1, #378de5) );
+	background:-moz-linear-gradient( center top, #414ab3 5%, #378de5 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#414ab3', endColorstr='#378de5');
+	background-color:#414ab3;
+	-webkit-border-top-left-radius:20px;
+	-moz-border-radius-topleft:20px;
+	border-top-left-radius:20px;
+	-webkit-border-top-right-radius:20px;
+	-moz-border-radius-topright:20px;
+	border-top-right-radius:20px;
+	-webkit-border-bottom-right-radius:20px;
+	-moz-border-radius-bottomright:20px;
+	border-bottom-right-radius:20px;
+	-webkit-border-bottom-left-radius:20px;
+	-moz-border-radius-bottomleft:20px;
+	border-bottom-left-radius:20px;
+	text-indent:0px;
+	border:1px solid #84bbf3;
+	display:inline-block;
+	font-family:Comic Sans MS;
+	font-size:40px;
+	font-weight:bold;
+	font-style:normal;
+	height:60px;
+	line-height:40px;
+	width:150px;
+	text-align:center;
+	padding-top: 15px;
+	margin-top: 750px;
+	margin-left: 100px;
+}
+
+a{
+	text-decoration:none;
+	color: #ffffff;
+}
+
+#option {
+	position: absolute;
+	float: left;
+
+}
+
+#option2 {
+	float: right;
+}
+
+#result {
+	position: absolute;
+	bottom: 0px;
+	margin-left: 550px;
+	margin-bottom: 50px;
+	width: 700px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+
+p {
+	float: left;
+	margin-left: 100px;
+	margin-top: 25px;
+	font-size: 250px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#little {
+	margin-top: 25px;
+	font-size: 20px;
+}
+
+#contra {
+	position: absolute;
+	float: center;
+	margin-left: 650px;
+	text-shadow: 0px 30px 20px #450000;
+	box-shadow:2px 9px 19px #800000;
+	background-color: #DBEAFF;
+	width: 500px;
+	border-radius: 100px; 
+	-moz-border-radius: 100px; 
+	-webkit-border-radius: 100px; 
+	border: 8px ridge #8A0000;
+
+}

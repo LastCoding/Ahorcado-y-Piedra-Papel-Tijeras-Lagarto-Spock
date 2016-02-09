@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="pptlsStyle.css">
+<title>Pedra, paper, tisores, llangardaix, Spock</title>
+
+<script type="text/javascript">
+
+function alea() {
+	    var option = Math.floor((Math.random() * 5) + 1);
+
+    switch (option) {
+    	case 1: {
+    		window.location.assign("option/rock.html");
+    		break;
+    	}
+    	case 2: {
+    		window.location.assign("option/paper.html");
+    		break;
+    	}
+    	case 3: {	
+    		window.location.assign("option/scissors.html");
+    		break;
+    	}
+    	case 4: {
+    		window.location.assign("option/lizard.html");
+    		break;
+    	}
+    	case 5: {
+    		window.location.assign("option/spock.html");
+    		break;
+    	}
+    }
+}
+</script>	
+
+</head>
+
+<style type="text/css">
+    #home {
+    -moz-box-shadow:inset 0px 0px 0px 0px #bbdaf7;
+    -webkit-box-shadow:inset 0px 0px 0px 0px #bbdaf7;
+    box-shadow:inset 0px 0px 0px 0px #bbdaf7;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #414ab3), color-stop(1, #378de5) );
+    background:-moz-linear-gradient( center top, #414ab3 5%, #378de5 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#414ab3', endColorstr='#378de5');
+    background-color:#414ab3;
+    -webkit-border-top-left-radius:20px;
+    -moz-border-radius-topleft:20px;
+    border-top-left-radius:20px;
+    -webkit-border-top-right-radius:20px;
+    -moz-border-radius-topright:20px;
+    border-top-right-radius:20px;
+    -webkit-border-bottom-right-radius:20px;
+    -moz-border-radius-bottomright:20px;
+    border-bottom-right-radius:20px;
+    -webkit-border-bottom-left-radius:20px;
+    -moz-border-radius-bottomleft:20px;
+    border-bottom-left-radius:20px;
+    text-indent:0px;
+    border:1px solid #84bbf3;
+    display:inline-block;
+    font-family:Comic Sans MS;
+    font-size:40px;
+    font-weight:bold;
+    font-style:normal;
+    height:60px;
+    line-height:40px;
+    width:150px;
+    text-align:center;
+    padding-top: 15px;
+}
+
+a{
+    text-decoration:none;
+    color: #ffffff;
+}
+</style>
+
+<body>
+
+
+
+<div class="categoriaJoc">
+  <ul>
+    <li class="rock"><a name="rock" href="option/rock.html">Pedra<span></span></a></li>
+    <li class="paper"><a name="paper" href="option/paper.html" >Paper<span></span></a></li>
+    <li class="scissors"><a name ="scissors" href="option/scissors.html">Tisores<span></span></a></li>
+    <li class="lizard"><a name="lizard" href="option/lizard.html">Llangardaix<span></span></a></li>
+    <li class="spock"><a name="spock" href="option/spock.html">Spock<span></span></a></li>
+   	<li class="alea"><a name="alea" href="option/aleatoria.html">Aleatori<span></span></a></li>
+
+  </ul>
+</div>
+
+<a href="projecte.html"><div id="home">
+Home
+</div></a>
+
+</body>
+</html>
+

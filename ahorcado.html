@@ -1,0 +1,487 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ahorcado</title>
+</head>
+
+<style>
+
+#paraulanova {
+    -moz-box-shadow:inset 0px 0px 0px 0px #bbdaf7;
+    -webkit-box-shadow:inset 0px 0px 0px 0px #bbdaf7;
+    box-shadow:inset 0px 0px 0px 0px #bbdaf7;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #FE9A2E), color-stop(1, #848484) );
+    background:-moz-linear-gradient( center top, #FE9A2E 5%, #848484 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#414ab3', endColorstr='#378de5');
+    background-color:#848484;
+    -webkit-border-top-left-radius:20px;
+    -moz-border-radius-topleft:20px;
+    border-top-left-radius:20px;
+    -webkit-border-top-right-radius:20px;
+    -moz-border-radius-topright:20px;
+    border-top-right-radius:20px;
+    -webkit-border-bottom-right-radius:20px;
+    -moz-border-radius-bottomright:20px;
+    border-bottom-right-radius:20px;
+    -webkit-border-bottom-left-radius:20px;
+    -moz-border-radius-bottomleft:20px;
+    border-bottom-left-radius:20px;
+    text-indent:0px;
+    border:1px solid #84bbf3;
+    display:inline-block;
+    font-family:Comic Sans MS;
+    font-size:20px;
+    font-weight: bold;
+    font-style:normal;
+    height:40px;
+    line-height:40px;
+    width:250px;
+    text-align:center;
+    color: white;
+}
+
+#home {
+    -moz-box-shadow:inset 0px 0px 0px 0px #bbdaf7;
+    -webkit-box-shadow:inset 0px 0px 0px 0px #bbdaf7;
+    box-shadow:inset 0px 0px 0px 0px #bbdaf7;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #414ab3), color-stop(1, #378de5) );
+    background:-moz-linear-gradient( center top, #414ab3 5%, #378de5 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#414ab3', endColorstr='#378de5');
+    background-color:#414ab3;
+    -webkit-border-top-left-radius:20px;
+    -moz-border-radius-topleft:20px;
+    border-top-left-radius:20px;
+    -webkit-border-top-right-radius:20px;
+    -moz-border-radius-topright:20px;
+    border-top-right-radius:20px;
+    -webkit-border-bottom-right-radius:20px;
+    -moz-border-radius-bottomright:20px;
+    border-bottom-right-radius:20px;
+    -webkit-border-bottom-left-radius:20px;
+    -moz-border-radius-bottomleft:20px;
+    border-bottom-left-radius:20px;
+    text-indent:0px;
+    border:1px solid #84bbf3;
+    display:inline-block;
+    font-family:Comic Sans MS;
+    font-size:40px;
+    font-weight:bold;
+    font-style:normal;
+    height:60px;
+    line-height:40px;
+    width:150px;
+    text-align:center;
+    padding-top: 15px;
+    color: white;
+}
+
+h1 {
+  color: #E4E1EB;
+  font-family: 'comic sans ms';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 52px;
+  font-variant: normal;
+}
+
+a{
+    text-decoration:none;
+    color: #ffffff;
+}
+
+body {
+    background-image: url("ahorcado.jpg");
+    background-size: 100% auto;
+    font-weight: bold;
+}
+
+#letras {
+	padding: 2px;
+	border-radius: 50px;
+	width: 500px;
+	box-shadow:2px 2px 10px #800F31;
+	background-color: #FFFCA1;
+}
+
+#paraula {
+	width: 300px;
+	background-color: #8FF0FF;
+	border-radius: 57px; 
+	-moz-border-radius: 57px; 
+	-webkit-border-radius: 57px; 
+	border: 6px ridge #8A0000;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#contador {
+	box-shadow:0px 4px 18px #364780;
+	background-color: #B5C6FF;
+	width: 200px;
+	padding-bottom: 12px;
+}
+
+#letrascontainer {
+
+	border-radius: 28px 28px 28px 28px; 
+	-moz-border-radius: 28px 28px 28px 28px; 
+	-webkit-border-radius: 28px 28px 28px 28px; 
+	border: 8px double #252C8A;
+	width: 200px;
+	height: 75px;
+	background-color: #9C0000;
+	color: white;
+	text-align: center;
+	font-weight: 900;
+	padding:20px 20px;
+}
+
+</style>
+
+<body>
+<center>
+<div>
+<h1> El Penjat </h1>
+</div>
+
+<div id="ahorcado">
+
+</div>
+
+<br>
+
+<input type="button" onclick="reload()" value="Tria una altra paraula" id="paraulanova">
+
+<br>
+<br>
+
+<div id="letras">
+<p>Selecciona la lletra que penses que conté la paraula:</p>
+
+<table>
+
+<tr>
+    <td onclick="cargaLletra('A')">A</td>
+    <td onclick="cargaLletra('B')">B</td>
+    <td onclick="cargaLletra('C')">C</td>
+    <td onclick="cargaLletra('D')">D</td>
+    <td onclick="cargaLletra('E')">E</td>
+    <td onclick="cargaLletra('F')">F</td>
+    <td onclick="cargaLletra('G')">G</td>
+    <td onclick="cargaLletra('H')">H</td>
+    <td onclick="cargaLletra('I')">I</td>
+    <td onclick="cargaLletra('J')">J</td>
+    <td onclick="cargaLletra('K')">K</td>
+    <td onclick="cargaLletra('L')">L</td>
+    <td onclick="cargaLletra('M')">M</td>
+    <td onclick="cargaLletra('N')">N</td>
+    <td onclick="cargaLletra('Ñ')">Ñ</td>
+    <td onclick="cargaLletra('O')">O</td>
+    <td onclick="cargaLletra('P')">P</td>
+    <td onclick="cargaLletra('Q')">Q</td>
+    <td onclick="cargaLletra('R')">R</td>
+    <td onclick="cargaLletra('S')">S</td>
+    <td onclick="cargaLletra('T')">T</td>
+    <td onclick="cargaLletra('U')">U</td>
+    <td onclick="cargaLletra('V')">V</td>
+    <td onclick="cargaLletra('W')">W</td>
+    <td onclick="cargaLletra('X')">X</td>
+    <td onclick="cargaLletra('Y')">Y</td>
+    <td onclick="cargaLletra('Z')">Z</td>
+</tr>
+
+</table>
+</div>
+
+<br>
+
+<div id="paraula">
+
+</div>
+
+<br>
+
+<div id="contador">
+
+</div>
+
+<br><br>
+
+<div id="letrascontainer">
+
+</div>
+
+<br>
+<a href="projecte.html"><div id="home">
+Home
+</div></a>
+
+<script type="text/javascript">
+
+var peliculas = String;
+var peliculasChar = String;
+
+peliculas[0] = "TITANIC";
+peliculas[1] = "AVATAR";
+peliculas[2] = "FORREST GUMP";
+peliculas[3] = "EL REY LEON";
+peliculas[4] = "MATRIX";
+peliculas[5] = "PRETTY WOMAN";
+peliculas[6] = "TERMINATOR";
+peliculas[7] = "TIBURON";
+peliculas[8] = "BATMAN";
+peliculas[9] = "BRAVEHEART";
+peliculas[10] = "PIRATAS DEL CARIBE";
+peliculas[11] = "GLADIATOR";
+peliculas[12] = "SAW";
+
+var peliculaChar = peliculas[0].split("");
+
+var lastcheck = true;
+
+var lost = false;
+
+function reload() {
+ location.reload(true);
+}
+
+function convertirPel() {
+
+    pelicula = arguments[0];
+    peliculaChar = pelicula.split("");
+    peliculaCharPre = [];
+
+    for (var e = 0; e < pelicula.length; e++) {
+    peliculaCharPre[e] = peliculaChar[e];
+    }
+    
+
+        for (var i = 0; i < pelicula.length; i++) {
+            if (pelicula[i] == " ") { 
+                peliculaChar[i] = "&nbsp";
+            } else peliculaChar[i] = "_";
+    }
+
+    peliculaCamuf = peliculaChar.join(" ");
+
+    document.getElementById("paraula").innerHTML = peliculaCamuf;
+
+}
+var alea = Math.floor((Math.random() *13) +1);
+convertirPel(peliculas[(alea-1)]);
+
+var contador = (pelicula.length+5);
+document.getElementById("contador").innerHTML = "<br> Intents restants: " + contador;
+
+function restaContador() {
+if (lastcheck) {
+    
+
+    if (contador != 0) {
+        contador--;
+    document.getElementById("contador").innerHTML = "<br> Intentos restants: " + contador;
+    if (contador == 1 || contador == 0) {
+    document.getElementById("contador").innerHTML = "<br> Intents restants: " + contador;
+    contador--;
+    }
+} else if (!(contador != 0) || contador < 0){
+    document.getElementById("paraula").innerHTML = pelicula;
+    document.getElementById("contador").innerHTML = "<br> Has perdut! ";
+    document.getElementById("ahorcado").innerHTML = "<img height='400' width='400' src='images/ahorcado.png'>";
+    lost = true;
+}}
+}
+var numletras = 0;
+
+function sobreEscribir(letra) {
+
+var num = 0;
+var letras = [];
+
+if (!lost) {
+var restacont = false;
+
+for (var x = 0; x < pelicula.length; x++) {
+
+
+
+if (pelicula[x] == letra) {
+      num = x;
+      peliculaChar[x] = letra;
+      restacont = true;
+}
+
+}
+
+if (!(pelicula[num] == letra)) {
+
+	document.getElementById("letrascontainer").innerHTML += "&nbsp" + letra + "&nbsp&nbsp";
+	numletras++;
+
+		if (numletras == 8 || numletras == 16 || numletras == 24 || numletras == 32) document.getElementById("letrascontainer").innerHTML += "<br>";
+	
+}
+
+document.getElementById("paraula").innerHTML = peliculaChar.join(" ");
+
+if (!restacont) {
+restaContador();
+restacont = false;
+}
+
+var result = checkWin();
+
+if (result) {
+    document.getElementById("contador").innerHTML = "Has guanyat!";
+    document.getElementById("ahorcado").innerHTML = "<img height='400' width='400' src='images/ahorcadowin.png'>";
+    lastcheck = false;
+} 
+
+}}
+
+function checkWin() {
+
+var winner = true;
+
+for (var i = 0; i < peliculaChar.length; i++) {
+
+if (peliculaChar[i] == "_" || peliculaChar[i] == " ") {
+    winner = false;
+    }
+
+}
+return winner;
+}
+
+</script>
+
+
+
+
+<script>
+function cargaLletra() {
+
+for(var i = 0; i < arguments.length; i++) {
+    
+    switch(arguments[i]) {
+
+        case "A":
+        sobreEscribir("A");
+        break;
+        
+        case "B":
+        sobreEscribir("B");
+        break;
+
+        case "C":
+        sobreEscribir("C");
+        break;
+
+        case "D":
+        sobreEscribir("D");
+        break;
+
+        case "E":
+        sobreEscribir("E");
+        break;
+
+        case "F":
+        sobreEscribir("F");
+        break;
+
+        case "G":
+        sobreEscribir("G");
+        break;
+
+        case "H":
+        sobreEscribir("H");
+        break;
+
+        case "I":
+        sobreEscribir("I");
+        break;
+
+        case "J":
+        sobreEscribir("J");
+        break;
+
+        case "K":
+        sobreEscribir("K");
+        break;
+
+        case "L":
+        sobreEscribir("L");
+        break;
+
+        case "M":
+        sobreEscribir("M");
+        break;
+
+        case "N":
+        sobreEscribir("N");
+        break;
+
+        case "Ñ":
+        sobreEscribir("Ñ");
+        break;
+
+        case "O":
+        sobreEscribir("O");
+        break;
+
+        case "P":
+        sobreEscribir("P");
+        break;
+
+        case "Q":
+        sobreEscribir("Q");
+        break;
+
+        case "R":
+        sobreEscribir("R");
+        break;
+
+        case "S":
+        sobreEscribir("S");
+        break;
+
+        case "T":
+        sobreEscribir("T");
+        break;
+
+        case "U":
+        sobreEscribir("U");
+        break;
+
+        case "V":
+        sobreEscribir("V");
+        break;
+
+        case "W":
+        sobreEscribir("W");
+        break;
+
+        case "X":
+        sobreEscribir("X");
+        break;
+
+        case "Y":
+        sobreEscribir("Y");
+        break;
+
+        case "Z":
+        sobreEscribir("Z");
+        break;
+
+    }
+}
+
+
+
+}
+</script>
+</center>
+</body>
+</html>
+
